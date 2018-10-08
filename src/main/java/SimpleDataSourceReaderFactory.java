@@ -20,7 +20,6 @@ public class SimpleDataSourceReaderFactory implements DataReaderFactory<Row>, Da
         }
 
         public Row get() {
-            // Airport airport = airports.get(index);
             Row row = RowFactory.create(airports[index]);
             System.out.println("Airport ===> "+ row);
             index = index + 1;
