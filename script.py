@@ -4,12 +4,13 @@ if __name__ == "__main__":
 
     spark = SparkSession \
     .builder \
-    .appName("spark-custom-datasource") \
     .master("local[2]") \
     .config("spark.python.profile", "true") \
     .getOrCreate()
-    
+
     df = spark.read.format("CustomDataSource").load()
-    df.show()
+    df.printSchema()
+
+    pdf = df.toPandas()
   
     spark.sparkContext.show_profiles()
