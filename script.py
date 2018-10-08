@@ -9,7 +9,7 @@ if __name__ == "__main__":
     .config("spark.python.profile", "true") \
     .getOrCreate()
     
-    df = spark.read.format("com.evid.CustomDataSource").load()
+    df = spark.read.format("CustomDataSource").load()
     df.show()
   
     spark.sparkContext.show_profiles()
