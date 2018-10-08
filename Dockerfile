@@ -21,4 +21,4 @@ RUN mvn package
 
 WORKDIR $SPARK_HOME
 
-CMD ["bin/spark-submit", "--class", "com.mitosis.Main", "--master", "local[2]", "/usr/local/project/target/spark-custom-datasource-0.1.0.jar", "/usr/local/project/csv" ]
+CMD ["bin/spark-submit", "--class", "Application", "--master", "local[2]", "/usr/local/project/target/spark-custom-datasource-0.1.0.jar", "/usr/local/project/csv" ]
