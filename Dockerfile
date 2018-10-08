@@ -1,5 +1,4 @@
-# FROM uhopper/hadoop:2.7.2
-FROM hseeberger/scala-sbt:8u151-2.12.4-1.0.4
+FROM maven:3-jdk-11
 VOLUME /tmp
 
 ENV SPARK_VERSION spark-2.3.2-bin-hadoop2.7
