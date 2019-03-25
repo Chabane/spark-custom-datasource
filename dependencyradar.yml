@@ -1,0 +1,5 @@
+version: '1'
+manifests:
+  - path:
+      manifest: '**/pom.xml'
+    type: java
